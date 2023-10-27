@@ -31,8 +31,14 @@ const routes = [
   {
     path: '/jobs/:id',
     name: 'jobsDetails',
-    component: JobsDetailsView
+    component: JobsDetailsView,
+    props: true
   },
+  //redirect a deprecated route for example
+  {
+    path: '/all-jobs',
+    redirect: '/jobs',
+  }
 ]
 
 const router = createRouter({
